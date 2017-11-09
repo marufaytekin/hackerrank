@@ -16,6 +16,8 @@ process q queries, where each query is one of the following 3 types:
 2. 2: Dequeue the element at the front of the queue.
 3. 3: Print the element at the front of the queue.
 """
+
+
 class MyQueue(object):
     def __init__(self):
         self.first = []
@@ -38,7 +40,6 @@ class MyQueue(object):
 
 
 queue = MyQueue()
-
 
 l = [1, 2, 3, 4]
 
