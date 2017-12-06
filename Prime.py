@@ -26,7 +26,7 @@ for k in range(2, 1000):
     a.append(k)
 
 output = test_prime(a)
-a1 = [2, 3, 5, 7, 11,13]
+a1 = [2, 3, 5, 7, 11, 13]
 o1 = [2, 3, 5, 7, 11, 13]
 
 print(test(output, o))

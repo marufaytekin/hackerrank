@@ -1,0 +1,7 @@
+Primitive data types: int, float, str, bool
+Built-in composite data types: list, dic, set, tuple
+User-defined data types: class
+
+Simple statements: print, =, return, import, global, pass
+
+Compound statements: if elif else, def, for while class

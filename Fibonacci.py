@@ -7,6 +7,7 @@ def fibonacci(n):
 
 
 def fibonacci2(n, a, b):
+    #print(a, b)
     if n == 0:
         return a
     if n == 1:

@@ -37,8 +37,8 @@ def climbI(steps):
 
 print(climb(1))
 print(climb(3))
-print(climb(7))
+print(climb(10))
 
 print(climbI(3))
-print(climbI(7))
+print(climbI(10))
 
