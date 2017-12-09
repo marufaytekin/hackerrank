@@ -9,10 +9,10 @@ def shuffle(my_list):
         swap(my_list, i, j)
     return my_list
 
-l = [1,9,3,5,7,0,2,3,4]
+l1 = [1,9,3,5,7,0,2,3,4]
 
 l2 = [1,2,3,4,5,6,7,8,9]
 
 
-print shuffle(l)
+print shuffle(l1)
 print shuffle(l2)
