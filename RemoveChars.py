@@ -18,4 +18,4 @@ def string_reduce(input_string):
     return ''.join(o)
 
 
-print(string_reduce("aaddaafffffergggg"))
+print(string_reduce("aaddaaffffferggggzzzzz"))

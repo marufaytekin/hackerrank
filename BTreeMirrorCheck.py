@@ -33,8 +33,6 @@ class Solution(object):
     def check_tree2(self, root):
         """
         non-recursive
-        :param root:
-        :return:
         """
         q = Queue()
         q.put(root)
