@@ -41,12 +41,12 @@ class BST:
             if left is None:
                 curr.set_left(Node(val))
             else:
-                return self.insert_node(left, val)
-        if val > curr_val:
+                self.insert_node(left, val)
+        elif val > curr_val:
             if right is None:
                 curr.set_right(Node(val))
             else:
-                return self.insert_node(right, val)
+                self.insert_node(right, val)
 
 
 l = [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -58,14 +58,17 @@ for item in l:
 
 def create_bst(a, l, r, root):
     print l, r
-    if l >= r:
+    if l > r:
         return
     else:
-        m = l + r / 2
-        print a[m]
-        create_bst(a, l, m, root)
-        create_bst(a, m, r, root)
+        m = (l + r) / 2
+        tree.insert(a[m])
+        create_bst(a, l, m-1, root)
+        create_bst(a, m+1, r, root)
 
 
 tree = BST()
 create_bst(l, 0, len(l)-1, tree)
+pass
+
+

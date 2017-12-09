@@ -19,73 +19,56 @@ Merge Function:
 3. Return auxilary arr
 """
 
-#
-# def merge(a, low, mid, hi):
-#     i = low
-#     j = mid + 1
-#     aux = []
-#     for item in a:
-#         aux.append(item)
-#     for k in range(low, hi+1):
-#         if i > mid:
-#             a[k] = aux[j]
-#             j += 1
-#         elif j > hi:
-#             a[k] = aux[i]
-#             i += 1
-#         elif a[i] < a[j]:
-#             a[k] = aux[i]
-#             i += 1
-#         else:
-#             a[k] = aux[j]
-#             j += 1
-#
-#
-# def sort(a, low, hi):
-#     if low >= hi:
-#         return
-#     mid = low + (hi - low) / 2
-#     sort(a, low, mid)
-#     sort(a, mid + 1, hi)
-#     merge(a, low, mid, hi)
 
-
-def merge(a, b):
-    '''
+def merge(left, right):
+    """
     merge two sorted lists     
-    '''
-    if a == None or b == None:
-        return []
-    n = len(a)
-    m = len(b)
-    res = (m+n) * [None]
+    """
+    if left is None or right is None:
+        return left or right
+    n = len(left)
+    m = len(right)
+    # res = (m + n) * [None] // array version implementation
+    res = []
     i = j = 0
-    for k in range(n+m):
+    for k in range(n + m):
         if i >= n:
-            res[k] = b[j]
+            # res[k] = right[j]
+            res.append(right[j])
             j += 1
         elif j >= m:
-            res[k] = a[i]
+            # res[k] = left[i]
+            res.append(left[i])
             i += 1
-        elif a[i] < b[j]:
-            res[k] = a[i]
+        elif left[i] < right[j]:
+            # res[k] = left[i]
+            res.append(left[i])
             i += 1
         else:
-            res[k] = b[j]
+            # res[k] = right[j]
+            res.append(right[j])
             j += 1
     return res
 
 
-def sort(a):
-    if len(a) < 2:
-        return a
-    mid = len(a) / 2
-    return merge(sort(a[0:mid]), sort(a[mid+1:len(a)]))
+def sort(my_list):
+    if len(my_list) < 2:
+        return my_list
+    mid = len(my_list) / 2
+    left = sort(sort(my_list[:mid]))
+    right = sort(my_list[mid:])
+    return merge(left, right)
 
 
-list1 = [3,4,7]
-list2 = [1,2,3]
+list1 = [3, 4, 7]
+list2 = [1, 2, 3]
+merge_res = [1, 2, 3, 3, 4, 7]
+assert merge(list1, list2) == merge_res
+assert merge(None, [1]) == [1]
+assert merge([2], None) == [2]
 
-print merge(list1, list2)
-
-sort(list1)
+l = [0, -1, 9, 4, 2, 3, 100, -344, 56, 23]
+out = [-344, -1, 0, 2, 3, 4, 9, 23, 56, 100]
+sorted_list = sort(l)
+print sorted_list
+assert sorted_list == out

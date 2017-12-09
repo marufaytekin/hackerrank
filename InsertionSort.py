@@ -1,21 +1,27 @@
+"""
+Insertion Sort
+Use index i from 0 to n-1 to process all elements of an array where
+n is the size of the array
+Everyting on the left side of i is going to be sorted.
+1. select element[i]
+2. move element i to the left until it is in correct place
+ 3. increment i and repeat.
+"""
+
 from swap import swap
 
 
-def insertion_sort(my_list):
-    """
-    insertion sort
-    O(n^2)
-    """
-    N = len(my_list)
-    for i in range(N):
+def sort(l):
+    n = len(l)
+    for i in range(n):
         for j in range(i, 0, -1):
-            if my_list[j] < my_list[j-1]:
-                swap(my_list, j-1, j)
-    return my_list
+            if l[j] < l[j-1]:
+                swap(l, j, j-1)
 
-l = [4, 9, 2, 0, 1, 3, 4, 6, 5]
+my_list = [4, 9, 2, 0, 1, 3, 4, 6, 5]
 
-print (insertion_sort(l))
+sort(my_list)
+print my_list
 
 
 
