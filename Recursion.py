@@ -152,14 +152,14 @@ def insert_x_tr(my_string):
     tail recursive
     """
 
-    def insert_x_acc(my_string_sub, acc):
-        if len(my_string_sub) == 1:
-            acc += my_string_sub
+    def insert_x_acc(my_sub_string, acc):
+        if len(my_sub_string) == 1:
+            acc += my_sub_string
             return acc
         else:
-            first_char = my_string_sub[0]
+            first_char = my_sub_string[0]
             acc += first_char + 'x'
-            return insert_x_acc(my_string_sub[1:], acc)
+            return insert_x_acc(my_sub_string[1:], acc)
 
     return insert_x_acc(my_string, "")
 

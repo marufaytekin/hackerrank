@@ -3,16 +3,23 @@ from swap import swap
 
 
 def shuffle(my_list):
-    N = len(my_list)
-    for i in range (1, N):
+    n = len(my_list)
+    for i in range (1, n):
         j = random.randint(0, i-1)
         swap(my_list, i, j)
     return my_list
 
-l1 = [1,9,3,5,7,0,2,3,4]
 
-l2 = [1,2,3,4,5,6,7,8,9]
+def shuffle_string(s):
+    n = len(s)
+    arr = list(s)
+    for i in range(1, n):
+        j = random.randint(0, i-1)
+        swap(arr, i, j)
+    return ''.join(arr)
 
 
-print shuffle(l1)
-print shuffle(l2)
+l = [1,9,3,5,7,0,-3,2,3,4]
+
+print shuffle(l)
+print shuffle_string("ahmet aytekin")

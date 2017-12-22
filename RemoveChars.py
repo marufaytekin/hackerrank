@@ -9,11 +9,11 @@ def string_reduce(input_string):
     """
     o = []
     in_list = list(input_string)
-    first = ''
+    curr = ''
     for c in in_list:
-        if c is not first:
+        if c is not curr:
             o.append(c)
-            first = c
+            curr = c
 
     return ''.join(o)
 

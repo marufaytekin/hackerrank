@@ -16,13 +16,33 @@ def number_needed(a, b):
     a_list = list(a)
     b_list = list(b)
     arr = [0] * 26
-    for l in a_list:
-        arr[ord(l) - ord('a')] += 1
-    for l in b_list:
-        arr[ord(l) - ord('a')] -= 1
+    for c in a_list:
+        arr[ord(c) - ord('a')] += 1
+    for c in b_list:
+        arr[ord(c) - ord('a')] -= 1
     cnt = 0;
     for i in arr:
         cnt += abs(i)
+    return cnt
+
+
+def number_needed2(a, b):
+    a_list = list(a)
+    b_list = list(b)
+    dic = {}
+    for c in a_list:
+        if c in dic:
+            dic[c] += 1
+        else:
+            dic[c] = 1
+    for c in b_list:
+        if c in dic:
+            dic[c] -= 1
+        else:
+            dic[c] = -1
+    cnt = 0;
+    for k in dic:
+        cnt += abs(dic[k])
     return cnt
 
 
@@ -32,3 +52,5 @@ b = "cbde"
 print(is_anagram(a, b))
 
 print(number_needed(a, b))
+
+print number_needed2(a, b)
