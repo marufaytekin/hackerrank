@@ -1,3 +1,6 @@
+"""
+Write a stack that would return the minimum element in O(1) time.
+"""
 class Stack:
     def __init__(self):
         self._items = []

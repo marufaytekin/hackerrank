@@ -63,7 +63,6 @@ def binary_search(sorted_list, left, right, k):
     if left > right:
         return False
     mid = (left + right) / 2
-    # print left, right
     if k < sorted_list[mid]:
         return binary_search(sorted_list, left, mid - 1, k)
     elif k > sorted_list[mid]:

@@ -8,15 +8,17 @@ The conjecture is that no matter what value of n, the sequence will always reach
 """
 
 
-def collatz(num):
-    print num
+def collatz(num, l):
+    l.append(num)
     if num == 1:
         return
     elif num % 2 == 0:
         curr = num / 2
-        collatz(curr)
+        collatz(curr, l)
     else:
         curr = 3 * num + 1
-        collatz(curr)
+        collatz(curr, l)
 
-print collatz(12)
+l = []
+collatz(12, l)
+print l

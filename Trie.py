@@ -36,7 +36,7 @@ o = open('output07.txt', 'r')
 file = f.read().split('\n')
 output = o.read().split('\n')
 
-for line, res in zip (file, output):
+for line, res in zip(file, output):
     op, contact = line.strip().split(' ')
     print(line, res)
     if op == 'add':

@@ -6,19 +6,25 @@ def merge_inetrvals(intervals):
         else:
             x1, y1 = stack.pop()
             x2, y2 = interval
-            if y1 > x2:
-                stack.append((x1, y2))
+            if y1 >= x2:
+                if y1 > y2:
+                    stack.append((x1, y1))
+                else:
+                    stack.append((x1, y2))
             else:
                 stack.append((x1, y1))
                 stack.append(interval)
-    print stack
+    return stack
 
 
-my_list = [(1, 3), (6, 8), (2, 4), (5, 7)]
+my_list = [(1, 3), (6, 8), (2, 4), (5, 9)]
 
 sorted_int = sorted(my_list, key=lambda x: x[0])
 # [(1, 3), (2, 4), (5, 7), (6, 8)]
 
-print sorted_int
+print "input: %s" % my_list
+print "sorted: %s " % sorted_int
 
-merge_inetrvals(sorted_int)
+output = merge_inetrvals(sorted_int)
+
+print "output: %s" % output
