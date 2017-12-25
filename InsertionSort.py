@@ -8,7 +8,7 @@ Everyting on the left side of i is going to be sorted.
 3. increment i and repeat.
 """
 
-from swap import swap
+from Swap import swap
 
 
 def sort(l):

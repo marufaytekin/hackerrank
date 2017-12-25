@@ -1,5 +1,5 @@
 import random
-from swap import swap
+from Swap import swap
 
 
 def shuffle(my_list):
