@@ -8,7 +8,7 @@ import Queue
 
 
 # Definition for a binary tree node.
-class TreeNode(object):
+class Node(object):
     def __init__(self, x):
         self.val = x
         self.left = None
@@ -16,6 +16,9 @@ class TreeNode(object):
 
 
 def check_tree(t1, t2):
+    """
+    recursive
+    """
     if t1 is None and t2 is None:
         return True
     if t1 is None or t2 is None:
@@ -24,10 +27,6 @@ def check_tree(t1, t2):
 
 
 def is_symmetric(root):
-    """
-    :type root: TreeNode
-    :rtype: bool
-    """
     return check_tree(root, root)
 
 

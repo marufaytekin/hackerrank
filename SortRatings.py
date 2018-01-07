@@ -5,10 +5,10 @@ sorted_data = sorted(data, key=lambda x: x[1])
 print sorted_data
 
 
-"""
-Quick sort for tuple
-"""
 def quick_sort(my_list):
+    """
+    Quick sort for list of tuples in (X0, X1) format
+    """
     if len(my_list) == 0:
         return []
     else:
