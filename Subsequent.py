@@ -11,4 +11,4 @@ def is_substring(s1, s2, m, n):
 
 a = "def"
 b = "abcdefg"
-print(is_substring(a, b, len(a), len(b)))
+print is_substring(a, b, len(a), len(b))

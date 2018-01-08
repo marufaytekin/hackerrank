@@ -5,10 +5,10 @@ n is the size of the array
 Everyting on the left side of i is going to be sorted.
 1. select element[i]
 2. move element i to the left until it is in correct place
- 3. increment i and repeat.
+3. increment i and repeat.
 """
 
-from swap import swap
+from Swap import swap
 
 
 def sort(l):

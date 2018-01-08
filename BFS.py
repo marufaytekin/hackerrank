@@ -34,14 +34,14 @@ class Node:
         return self._val
 
 
-def bfs(root, item):
+def bfs(root, target):
     queue = Queue()
     queue.push(root)
     while len(queue) != 0:
         temp = queue.pop()
         print temp.get_val()
-        if temp.get_val() == item:
-            return item
+        if temp.get_val() == target:
+            return target
         left = temp.get_left()
         right = temp.get_right()
         if left is not None:

@@ -52,8 +52,21 @@ def reverse_num(n):
         return -a
     return a
 
+def reverse_string_by_wor(s):
+    """
+    Reverse a string by word. For instance, given "The sky is blue",
+    output "blue is sky The".
+    """
+    l = s.split(" ")
+    l.reverse()
+    return ' '.join(l)
+
+
+
 
 print(reverse_num(123))
 print(reverse_num(-123))
 
 print(reverse_num(-122342353))
+
+print reverse_string_by_wor("The sky is blue")

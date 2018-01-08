@@ -21,7 +21,7 @@ def climb(n):
     return climb(n - 1) + climb(n - 2) + climb(n - 3)
 
 
-def climbI(steps):
+def climb2(steps):
     if steps < 0:
         return 0
     if steps <= 1:
@@ -39,6 +39,5 @@ print(climb(1))
 print(climb(3))
 print(climb(10))
 
-print(climbI(3))
-print(climbI(10))
-
+print(climb2(3))
+print(climb2(10))

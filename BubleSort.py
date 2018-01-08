@@ -1,7 +1,4 @@
-def swap(a, i, j):
-    temp = a[i]
-    a[i] = a[j]
-    a[j] = temp
+from Swap import swap
 
 
 def bubble_sort(a):
@@ -18,7 +15,7 @@ def bubble_sort(a):
     return total_swaps
 
 
-l = [1, 2, 6, 3, 4, 7, 9, 8, 5]
+l = [1, 2, 6, 3, 4, 7, -3, 9, 8, 5]
 
 print(l)
 

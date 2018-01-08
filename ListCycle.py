@@ -5,17 +5,17 @@ class LLNode:
 
 
 def detect_cycle(l):
-    s = l
-    f = l
-    while s is not None:
-        s = s.next
-        if s is None:
+    slow = l
+    fast = l
+    while slow is not None:
+        slow = slow.next
+        if slow is None:
             return False
-        if f is not None:
-            f = f.next
-        if f is not None and f.next is not None:
-            f = f.next.next
-        if s is f:
+        if fast is not None:
+            fast = fast.next
+        if fast is not None and fast.next is not None:
+            fast = fast.next.next
+        if slow is fast:
             return True
 
 

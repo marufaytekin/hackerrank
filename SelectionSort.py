@@ -8,7 +8,7 @@ following steps:
 4. go to step 1 and repeat until i = n
 """
 
-from swap import swap
+from Swap import swap
 
 
 def sort(l):

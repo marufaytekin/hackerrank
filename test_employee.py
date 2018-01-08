@@ -14,8 +14,8 @@ class TestEmployee(unittest.TestCase):
         print("tearDownClass")
 
     def setUp(self):
-        self.e1 = Employee("maruf", "veli", 1000)
-        self.e2 = Employee("betul", "aytekin", 2000)
+        self.e1 = Employee("Maruf", "Aytekin", 1000)
+        self.e2 = Employee("John", "Doe", 2000)
         print("setUp")
 
     def tearDown(self):
@@ -25,14 +25,14 @@ class TestEmployee(unittest.TestCase):
         print("tearDown")
 
     def test_email(self):
-        self.assertEqual(self.e1.email, "maruf.veli@email.com")
-        self.assertEqual(self.e2.email, "betul.aytekin@email.com")
+        self.assertEqual(self.e1.email, "Maruf.Aytekin@email.com")
+        self.assertEqual(self.e2.email, "John.Doe@email.com")
 
         self.e1.first = "ayse"
         self.e2.first = "hande"
 
         self.assertEqual(self.e1.email, "ayse.veli@email.com")
-        self.assertEqual(self.e2.email, "hande.aytekin@email.com")
+        self.assertEqual(self.e2.email, "hande.guler@email.com")
 
     def test_apply_raise(self):
         print("test_apply_raise")
