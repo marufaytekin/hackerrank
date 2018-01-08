@@ -70,5 +70,5 @@ assert merge([2], None) == [2]
 l = [0, -1, 9, 4, 2, 3, 100, -344, 56, 23]
 out = [-344, -1, 0, 2, 3, 4, 9, 23, 56, 100]
 sorted_list = sort(l)
-print sorted_list
+print (sorted_list)
 assert sorted_list == out

@@ -11,7 +11,6 @@ def merge(a, low, mid, hi):
     i = low
     j = mid + 1
     for k in range(low, hi + 1):
-        print i, j
         if i > mid:
             a[k] = aux[j]
             j += 1
@@ -48,4 +47,4 @@ a1 = [1, 3, 2, 5]
 # print merge(a1, 0, 1, 3)
 
 merge_sort(l)
-print l
+print (l)
