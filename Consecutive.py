@@ -17,6 +17,10 @@ def is_consecutive(l):
 
 
 def is_consecutive_rec(l):
+    """
+    recursive implementation
+    l: sorted list
+    """
     size = len(l)
     if size == 1:
         return True

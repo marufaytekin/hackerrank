@@ -25,7 +25,7 @@ def ransom_note(magazine, ransom):
 magazine = 'two times three is not four'.split(' ')
 ransom = 'two times two is four'.split(' ')
 answer = ransom_note(magazine, ransom)
-if (answer):
+if answer:
     print("Yes")
 else:
     print("No")

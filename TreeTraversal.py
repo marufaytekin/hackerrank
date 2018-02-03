@@ -25,15 +25,17 @@ def post_order(root):
     post_order(root.right)
     sys.stdout.write(str(root.val) + ' ')
 
+
+# create a test data
 my_list= [1, 2, 3, 4, 5, 6, 7, 8, 9]
-
 tree = BST()
-
 tree.create_bst(my_list, 0, len(my_list) - 1)
 
 print "\npreorder:"
 pre_order(tree.root)
+
 print "\nin order:"
 in_order(tree.root)
+
 print "\npost order:"
 post_order(tree.root)

@@ -1,5 +1,5 @@
 """
-Find and print all subsets of a given set! (Given as an array.)
+Given as an array, find and print all subsets of the array.
 """
 
 

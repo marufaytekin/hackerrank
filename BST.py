@@ -1,3 +1,6 @@
+"""
+implementation of binary search tree
+"""
 import sys
 
 

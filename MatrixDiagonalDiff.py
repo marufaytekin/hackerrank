@@ -1,6 +1,8 @@
 """
 You have an nxn matrix of numbers. You need to find the sum  of the two diagonals
-and output the absolute value of the difference. For instance if you have
+and output the absolute value of the difference.
+
+For instance if you have
 [ [1, 2, 3], [4, 5, 6], [7, 8, 9] ]
 then output abs((1+5+9)-(3+5+7))
 """

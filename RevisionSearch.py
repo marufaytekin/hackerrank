@@ -1,10 +1,13 @@
 """
-Google Interview Question:
-How would you search a broken commit if you have changes as a range between a and b.
+Google Interview Question: How would you search a broken commit if you have changes
+as a range between a and b.
 """
 
 
 def build(a, b):
+    """
+    simulate build failure
+    """
     if a < 21 and b > 20:
         return False
     if a == b:

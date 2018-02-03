@@ -8,20 +8,10 @@ find and print the number of ways he can climb each staircase on a new line.
 """
 
 
-def climb(n):
+def climb(steps):
     """
-    recursive 
-    :param n: number of stairs
-    :return: number of different ways to climb
+    iterative
     """
-    if n < 0:
-        return 0
-    if n == 0:
-        return 1
-    return climb(n - 1) + climb(n - 2) + climb(n - 3)
-
-
-def climb2(steps):
     if steps < 0:
         return 0
     if steps <= 1:
@@ -35,9 +25,21 @@ def climb2(steps):
     return paths[steps]
 
 
+def clim_r(n):
+    """
+    recursive
+    """
+    if n < 0:
+        return 0
+    if n == 0:
+        return 1
+    return clim_r(n - 1) + clim_r(n - 2) + clim_r(n - 3)
+
+
 print(climb(1))
 print(climb(3))
 print(climb(10))
 
-print(climb2(3))
-print(climb2(10))
+print(clim_r(1))
+print(clim_r(3))
+print(clim_r(10))

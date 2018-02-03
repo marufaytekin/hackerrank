@@ -20,24 +20,10 @@ your function returns 0 when the reversed integer overflows.
 """
 
 
-def reverse(s):
-    """
-    reverse a string
-    :param s: string to reverse
-    :return: reversed string
-    """
-    s2 = list(s)
-    size = len(s2)
-    r = []
-    for i in range(size):
-        r.append(s2[-(i + 1)])
-    return ''.join(r)
-
-
-s = "abcdefg"
-
-
 def reverse_num(n):
+    """
+    reverse an integer
+    """
     a = 0
     sign = False
     if n < 0:
@@ -52,6 +38,19 @@ def reverse_num(n):
         return -a
     return a
 
+
+def reverse_str(s):
+    """
+    reverse a string
+    """
+    s2 = list(s)
+    size = len(s2)
+    r = []
+    for i in range(size):
+        r.append(s2[-(i + 1)])
+    return ''.join(r)
+
+
 def reverse_string_by_wor(s):
     """
     Reverse a string by word. For instance, given "The sky is blue",
@@ -62,11 +61,8 @@ def reverse_string_by_wor(s):
     return ' '.join(l)
 
 
-
-
-print(reverse_num(123))
-print(reverse_num(-123))
-
-print(reverse_num(-122342353))
-
+print reverse_num(123)
+print reverse_num(-123)
+print reverse_num(-122342353)
+print reverse_str("abcdefg")
 print reverse_string_by_wor("The sky is blue")

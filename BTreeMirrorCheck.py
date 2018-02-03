@@ -15,22 +15,7 @@ class Node(object):
         self.right = None
 
 
-def check_tree(t1, t2):
-    """
-    recursive
-    """
-    if t1 is None and t2 is None:
-        return True
-    if t1 is None or t2 is None:
-        return False
-    return t1.val == t2.val and check_tree(t1.left, t2.right) and check_tree(t1.right, t2.left)
-
-
-def is_symmetric(root):
-    return check_tree(root, root)
-
-
-def check_tree2(root):
+def check_tree(root):
     """
     non-recursive
     """
@@ -51,3 +36,18 @@ def check_tree2(root):
         q.put(t1.right)
         q.put(t2.left)
     return True
+
+
+def check_tree_rec(t1, t2):
+    """
+    recursive
+    """
+    if t1 is None and t2 is None:
+        return True
+    if t1 is None or t2 is None:
+        return False
+    return t1.val == t2.val and check_tree_rec(t1.left, t2.right) and check_tree_rec(t1.right, t2.left)
+
+
+def is_symmetric(root):
+    return check_tree_rec(root, root)

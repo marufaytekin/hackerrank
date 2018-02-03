@@ -35,6 +35,7 @@ def my_pow2(a, b):
             half = my_pow2(a, (b - 1) / 2)
             return a * half * half
 
+
 assert pow(3, -1) == my_pow(3, -1)
 assert pow(3, -1) == my_pow2(3, -1)
 assert pow(3, 0) == my_pow(3, 0)
@@ -43,5 +44,4 @@ assert pow(3, 2) == my_pow(3, 2)
 assert pow(3, 2) == my_pow2(3, 2)
 assert pow(2, 3) == my_pow(2, 3)
 assert pow(2, 3) == my_pow2(2, 3)
-
 assert pow(4, 4) == my_pow(4, 4)

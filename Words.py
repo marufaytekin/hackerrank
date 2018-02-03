@@ -1,6 +1,5 @@
 """
 find all possible words from given characters
-Apple
 """
 
 import itertools

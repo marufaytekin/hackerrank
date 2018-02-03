@@ -1,16 +1,22 @@
 """
-write a function that returns sum of the number up to n
+write a function that returns sum of the numbers up to n
 """
 
 
-def sumupto(n):
+def sumto(n):
+    """
+    recursive
+    """
     if n == 0:
         return 0
     else:
-        return n + sumupto(n-1)
+        return n + sumto(n - 1)
 
 
-def sumupto_tr(n):
+def sumto_tr(n):
+    """
+    tail recursive
+    """
     def sum_acc(n, acc):
         if n == 0:
             return acc
@@ -19,7 +25,7 @@ def sumupto_tr(n):
 
     return sum_acc(n, 0)
 
-print(sumupto(100))
-print(sumupto_tr(100))
+print(sumto(100))
+print(sumto_tr(100))
 
 

@@ -1,3 +1,11 @@
+"""
+Given two strings s and t, write a function to determine if t is an anagram of s.
+For example, s = "anagram", t = "nagaram", return true. s = "rat", t = "car", return false.
+Note: You may assume the string contains only lowercase alphabets.
+The minimum number of characters need to be changed to make two words anagram.
+"""
+
+
 def is_anagram(a, b):
     if len(a) != len(b):
         return False
@@ -50,7 +58,5 @@ a = "adcb"
 b = "cbde"
 
 print(is_anagram(a, b))
-
 print(number_needed(a, b))
-
 print number_needed2(a, b)

@@ -36,6 +36,7 @@ def bfs(root, target):
             queue.append(curr.right)
 
 
+# create a test data
 my_list = []
 for i in range(0, 10):
     my_list.append(i)

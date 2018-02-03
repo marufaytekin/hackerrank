@@ -1,7 +1,10 @@
 """
-execute dependent jobs
-no cyclic dependency
-job dic = {'a': ['b', 'c'], 'f': ['k', 'l'], 'c': ['d', 'e', 'f']}
+You are given  a list of jobs that someof them have dependencies. Execute these jobs in an order.
+For example: In the following job dictionary,
+job_dic = {'a': ['b', 'c'], 'f': ['k', 'l'], 'c': ['d', 'e', 'f']}
+'a' can be executed after 'b' and 'c' are executed etc.
+
+It is given that there is no cyclic dependency between the jobs.
 """
 
 
@@ -20,10 +23,9 @@ def sort(jobs):
     for k in jobs:
         if k not in visited:
             dfs(k, jobs, visited, stack)
-    for job in stack:
-        print job  # execute(job)
+    return stack
 
 
 j = {'a': ['b', 'c'], 'f': ['k', 'l'], 'c': ['d', 'e', 'f']}
 
-sort(j)
+print sort(j)

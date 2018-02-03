@@ -1,7 +1,6 @@
 """
 Insertion Sort
-Use index i from 0 to n-1 to process all elements of an array where
-n is the size of the array
+Use index i from 0 to n-1 to process all elements of an array where n is the size of the array
 Everyting on the left side of i is going to be sorted.
 1. select element[i]
 2. move element i to the left until it is in correct place
@@ -12,6 +11,9 @@ from Swap import swap
 
 
 def sort(l):
+    """
+    O(n^2)
+    """
     n = len(l)
     for i in range(n):
         for j in range(i, 0, -1):

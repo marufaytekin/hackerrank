@@ -1,7 +1,8 @@
 # coding=utf-8
-""" 1. Write a function 𝚝𝚛𝚒𝚊𝚗𝚐𝚞𝚕𝚊𝚛_𝚜𝚞𝚖(𝚗𝚞𝚖) that computes the arithmetic sum 0+1+2...+(num−1)+num. For
-example, 𝚝𝚛𝚒𝚊𝚗𝚐𝚞𝚕𝚊𝚛_𝚜𝚞𝚖(𝟹) should return 𝟼. Note that this sum can be computed directly via a simple
-arithmetic formula, but use a recursive approach instead. """
+""" 1. Write a function triangular_sum(num) that computes the arithmetic sum 0+1+2...+(num−1)+num.
+For example, triangular_sum(3) should return 𝟼.
+Note that this sum can be computed directly via a simple arithmetic formula,
+but use a recursive approach instead."""
 
 
 def triangular_sum(num):
@@ -20,7 +21,6 @@ def triangular_sum_tr(num):
     """
     tail recursive
     """
-
     def triangular_sum_acc(a, acc):
         if a == 0:
             return acc

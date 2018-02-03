@@ -1,3 +1,8 @@
+"""
+Given a string, write a recursive function that check if the given string is palindrome, else not palindrome.
+"""
+
+
 def is_palindrome(word):
     if len(word) < 2:
         return True

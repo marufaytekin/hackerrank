@@ -34,7 +34,7 @@ def dfs(grid, visited, i, j):
                dfs(grid, visited, i + 1, j + 1)
 
 
-def get_biggest_region(grid):
+def calculate_largest_region(grid):
     m = len(grid)
     n = len(grid[0])
     result = [[0 for elem in range(n)] for elem in range(m)]
@@ -50,5 +50,5 @@ def get_biggest_region(grid):
 _grid = [[1, 1, 0, 0], [0, 1, 1, 0], [0, 0, 1, 0], [1, 0, 0, 0]]
 _grid2 = [[0, 0, 0, 1], [1, 1, 0, 1], [0, 1, 1, 0], [0, 1, 0, 0]]
 
-print get_biggest_region(_grid)
-print get_biggest_region(_grid2)
+print calculate_largest_region(_grid)
+print calculate_largest_region(_grid2)

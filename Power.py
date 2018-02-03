@@ -1,3 +1,8 @@
+"""
+Given a numbers n, check if ynis a power of 10 or not.
+"""
+
+
 def power(n, d):
     if n == 1:
         return d

@@ -1,3 +1,10 @@
+"""
+Given a collection of intervals, merge all overlapping intervals.
+
+For example,
+Given [1,3],[2,6],[8,10],[15,18],
+return [1,6],[8,10],[15,18]
+"""
 def merge_inetrvals(intervals):
     stack = []
     for interval in intervals:
@@ -17,14 +24,13 @@ def merge_inetrvals(intervals):
     return stack
 
 
-my_list = [(1, 3), (6, 8), (2, 4), (5, 9)]
+test_data = [(1, 3), (2, 6), (8, 10), (15, 18)]
 
-sorted_int = sorted(my_list, key=lambda x: x[0])
-# [(1, 3), (2, 4), (5, 7), (6, 8)]
+sorted_intervals = sorted(test_data, key=lambda x: x[0])
 
-print "input: %s" % my_list
-print "sorted: %s " % sorted_int
+print "input: %s" % test_data
+print "sorted: %s " % sorted_intervals
 
-output = merge_inetrvals(sorted_int)
+merged_intervals = merge_inetrvals(sorted_intervals)
 
-print "output: %s" % output
+print "output: %s" % merged_intervals

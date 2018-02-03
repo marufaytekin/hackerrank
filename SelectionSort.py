@@ -23,7 +23,7 @@ def sort(l):
                 min_idx = j
         swap(l, i, min_idx)
 
-l = [4, 9, 2, 1, 6, 8, 7, 4, 0]
+in_list = [4, 9, 2, 1, 6, 8, 7, 4, 0]
 
-sort(l)
-print l
+sort(in_list)
+print in_list

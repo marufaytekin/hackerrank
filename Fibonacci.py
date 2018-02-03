@@ -1,5 +1,12 @@
-# Recursive
+"""
+Please implement a function which returns the nth number in Fibonacci sequences with an input n.
+"""
+
+
 def fibonacci(n):
+    """
+    Recursive
+    """
     if n == 0:
         return 0
     if n == 1:
@@ -7,8 +14,10 @@ def fibonacci(n):
     return fibonacci(n - 1) + fibonacci(n - 2)
 
 
-# Tail Recursive
 def fibonacci_tr(n, a, b):
+    """
+    tail recursive
+    """
     print a, b
     if n == 0:
         return a
@@ -19,5 +28,4 @@ def fibonacci_tr(n, a, b):
 
 k = 10
 print(fibonacci(k))
-
 print(fibonacci_tr(k, 0, 1))

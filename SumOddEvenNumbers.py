@@ -1,5 +1,5 @@
 """
-Take array as argument and print sum of odd numbers and even numbers.
+Take array of integers as an argument and print sum of odd numbers and even numbers.
 """
 
 

@@ -28,24 +28,19 @@ def merge(left, right):
         return left or right
     n = len(left)
     m = len(right)
-    # res = (m + n) * [None] // array version implementation
     res = []
     i = j = 0
     for k in range(n + m):
         if i >= n:
-            # res[k] = right[j]
             res.append(right[j])
             j += 1
         elif j >= m:
-            # res[k] = left[i]
             res.append(left[i])
             i += 1
         elif left[i] < right[j]:
-            # res[k] = left[i]
             res.append(left[i])
             i += 1
         else:
-            # res[k] = right[j]
             res.append(right[j])
             j += 1
     return res
@@ -55,11 +50,12 @@ def sort(my_list):
     if len(my_list) < 2:
         return my_list
     mid = len(my_list) / 2
-    left = sort(my_list[:mid])
+    left = sort(sort(my_list[:mid]))
     right = sort(my_list[mid:])
     return merge(left, right)
 
 
+# test merge function
 list1 = [3, 4, 7]
 list2 = [1, 2, 3]
 merge_res = [1, 2, 3, 3, 4, 7]
@@ -67,8 +63,9 @@ assert merge(list1, list2) == merge_res
 assert merge(None, [1]) == [1]
 assert merge([2], None) == [2]
 
+# test merge sort
 l = [0, -1, 9, 4, 2, 3, 100, -344, 56, 23]
 out = [-344, -1, 0, 2, 3, 4, 9, 23, 56, 100]
 sorted_list = sort(l)
-print sorted_list
+print (sorted_list)
 assert sorted_list == out

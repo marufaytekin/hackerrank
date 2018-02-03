@@ -1,3 +1,8 @@
+"""
+I saw this on Quora as an interesting sorting algorithm.
+"""
+
+
 from multiprocessing import Pool
 from time import sleep
 

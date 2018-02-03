@@ -24,6 +24,7 @@ prime_list = is_prime_generator(range(2, 20))
 for item in prime_list:
     print item
 
+
 def test_prime(l):
     p = []
     for e in l:

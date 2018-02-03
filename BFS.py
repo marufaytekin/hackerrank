@@ -1,3 +1,8 @@
+"""
+Implement Breadth First Search algorithm.
+"""
+
+
 class Queue:
     def __init__(self):
         self.items = []
@@ -34,9 +39,9 @@ class Node:
         return self._val
 
 
-def bfs(root, target):
+def bfs(_root, target):
     queue = Queue()
-    queue.push(root)
+    queue.push(_root)
     while len(queue) != 0:
         temp = queue.pop()
         print temp.get_val()

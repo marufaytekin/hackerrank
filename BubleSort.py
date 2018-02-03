@@ -1,3 +1,6 @@
+"""
+implementation of bubble sort algorithm
+"""
 from Swap import swap
 
 

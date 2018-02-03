@@ -1,3 +1,8 @@
+"""
+Find a loop in a singly linked list
+"""
+
+
 class LLNode:
     def __init__(self, value):
         self.value = value
@@ -5,6 +10,9 @@ class LLNode:
 
 
 def detect_cycle(l):
+    """
+    Implements Floyd's Cycle-Finding Algorithm
+    """
     slow = l
     fast = l
     while slow is not None:

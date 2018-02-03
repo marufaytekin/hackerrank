@@ -1,3 +1,6 @@
+"""
+Given two string find if one is subset of the other
+"""
 
 
 def is_substring(s1, s2, m, n):
